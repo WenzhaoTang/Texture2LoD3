@@ -1,0 +1,4 @@
+# ninja log v5
+0	2219	1732454479399606320	/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/build/temp.linux-x86_64-cpython-39/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/src/cpu/ms_deform_attn_cpu.o	7bf599e81fbcb94c
+1	7908	1732454485089517705	/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/build/temp.linux-x86_64-cpython-39/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/src/cuda/ms_deform_attn_cuda.o	e60f4415884c2d80
+1	8149	1732454485330513953	/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/build/temp.linux-x86_64-cpython-39/home/tang/code/Semantic-SAM/semantic_sam/body/encoder/ops/src/vision.o	fa9cb00a6a2dcffd

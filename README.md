@@ -2,17 +2,26 @@
 
 Welcome to the draft version of our code for experiments in the ReLoD3 Texturing project! This project focuses on various techniques for enhancing 3D building models. Below are the key components of the project:
 
-## LoD3 Building Extraction
+## Step 0: LoD3 Building Extraction
 Extract detailed Level of Detail 3 (LoD3) building models from various data sources.
 
-## Cluster Small Triangular Faces
+## Step 1: Cluster Small Triangular Faces
 Group small triangular faces to simplify the 3D model and improve performance.
 
-## Morphological Adaptation
+## Step 2: Rectification and Stitching
+Rectify and stitch the image tiles of WallSurface to create a seamless texture.
+
+## Step 3: Instance Segmentation
+Segment the the Steiched and Rectified images of WallSurface
+
+## Step 4: Morphological Adaptation
 Apply morphological operations to adapt and refine the 3D building models.
 
-## Texturing
-Add realistic textures to the 3D models to enhance visual appearance.
+## Step 5: Texturing
+Utilize ray tracing and texture mapping techniques to apply WallSurface textures to the 3D building models.
+
+## Step 6: Evaluation
+SSIM and PSNR evaluation of the generated textures.
 
 ---
 
