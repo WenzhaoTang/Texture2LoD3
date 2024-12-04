@@ -15,10 +15,10 @@ Rectify and stitch the image tiles of WallSurface to create a seamless texture.
 Segment the the Steiched and Rectified images of WallSurface
 
 ## Step 4: Morphological Adaptation
-Apply morphological operations to adapt and refine the 3D building models.
+Apply morphological operations to adapt and refine the rectified images of WallSurface.
 
 ## Step 5: Texturing
-Utilize ray tracing and texture mapping techniques to apply WallSurface textures to the 3D building models.
+Utilize ray tracing and texture mapping techniques to apply WallSurface textures onto the LoD3 models.
 
 ## Step 6: Evaluation
 SSIM and PSNR evaluation of the generated textures.
