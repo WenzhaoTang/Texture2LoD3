@@ -12,7 +12,7 @@ Run the script with two image file paths as arguments to generate a stitched ima
 ### Example
 ```bash
 python run_Image_Stitching.py '/path/to/image1.jpg' '/path/to/image2.jpg'
-
+```
 
 # Image Patches Rectification
 
