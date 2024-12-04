@@ -23,6 +23,9 @@ Utilize ray tracing and texture mapping techniques to apply WallSurface textures
 ## Step 6: Evaluation
 SSIM and PSNR evaluation of the generated textures.
 
+## Revised Code from NUS TEAM
+The revised code from NUS team is available in the `footprints` folder, with additinal geo-data calculation and Panaroma image extraction.
+
 ---
 
 Feel free to explore each section to learn more about the techniques and methodologies used in this project. Happy modeling!
