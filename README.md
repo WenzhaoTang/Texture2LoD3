@@ -28,4 +28,4 @@ The revised code from NUS team is available in the `footprints` folder, with mis
 
 ---
 
-Feel free to explore each section to learn more about the techniques and methodologies used in this project. Happy modeling!
+Feel free to explore each section to learn more about the techniques and methodologies used in this project. Happy modeling O(laf)W(weihang)W(enzhao):D
