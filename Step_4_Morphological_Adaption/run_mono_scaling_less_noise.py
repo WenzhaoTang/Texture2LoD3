@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import argparse
-from quadrilateral_fitter.my_quadrilateral_fitter import QuadrilateralFitter
+from Step_4_Morphological_Adaption.quadrilateral_fitter.enhanced_quadrilateral_fitter import QuadrilateralFitter
 import matplotlib.pyplot as plt
 
 def print_detected_corners(corners):

@@ -8,7 +8,7 @@ from warnings import warn
 from itertools import combinations
 from random import sample
 
-from quadrilateral_fitter import _Line 
+from Step_4_Morphological_Adaption.quadrilateral_fitter.orig_quadrilateral_fitter import _Line 
 
 class QuadrilateralFitter:
     def __init__(self, polygon: np.ndarray | tuple | list | Polygon):
