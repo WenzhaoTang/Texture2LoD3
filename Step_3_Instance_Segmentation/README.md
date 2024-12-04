@@ -1,7 +1,13 @@
-# Semantic SAM Mask Processing
-
+# Enhanced Semantic-SAM Mask Processing
 ## Overview
-This script processes images using the Semantic SAM framework, generating masks and applying semantic class predictions to create refined outputs. The script includes functions for mask combination, cropping, and filtering.
+
+- Processes images using the Semantic SAM framework.
+- Generates masks and applies semantic class predictions.
+- Includes functions for:
+   - Mask combination
+   - Cropping
+   - Filtering
+- Creates refined outputs.
 
 ---
 
@@ -22,4 +28,4 @@ This script processes images using the Semantic SAM framework, generating masks 
    pip install torch torchvision numpy pillow opencv-python
 
 ## Note
-The 'top_k_masks' parameter in the script determines the number of masks to retain and process after the initial mask generation step. It helps filter and prioritize the masks based on their relevance (e.g., area) before further steps.
+We define 'top_k_masks' parameter in the script to determine the number of masks to retain and process after the initial mask generation step. It helps filter and prioritize the masks based on their relevance (e.g., area) before further steps.
