@@ -1,4 +1,4 @@
-# Instructions for Clustering Model Surfaces
+# Clustering Model Surfaces
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ pip install numpy scikit-learn shapely scipy open3d
 
 2. **Run the script**: Use the following command to run the script, replacing `<path_to_obj_file>` and `<output_directory>` with your actual file path and desired output directory.
     ```bash
-    python script.py <path_to_obj_file> <output_directory>
+    python run_normals_cluster_retriangulate.py <path_to_obj_file> <output_directory>
     ```
 
 3. **Check the output**: The script will generate clustered OBJ files in the specified output directory and visualize the clusters with quadrilaterals.

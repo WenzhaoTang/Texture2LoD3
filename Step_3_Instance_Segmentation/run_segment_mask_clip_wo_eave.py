@@ -85,7 +85,7 @@ def main():
     save_path = '/home/tang/code/Semantic-SAM/vis_v3'
 
     model_type = 'L'
-    top_k_masks = 20
+    top_k_masks = 20 # Update
     padding = 10
     CONFIDENCE_THRESHOLD = 0.1
 
