@@ -15,3 +15,6 @@ Install missing dependencies using `pip`:
 ```bash
 pip install numpy pandas streetlevel
 ```
+
+## Note
+When generating the detected_buildings.csv, be sure to delete all the images under output/pano_dino/annotated_image.
