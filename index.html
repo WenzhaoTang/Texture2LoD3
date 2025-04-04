@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images">
+  <meta name="keywords" content="Panoramic Rectification, LoD3 Building Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link href="static/css/twentytwenty.css" rel="stylesheet" type="text/css" />
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+  <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <meta property="og:url" content="https://https://WenzhaoTang.github.io/Texture2LoD3/" />
+  <meta property="og:title" content="Texture2LoD3" />
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images </h1> 
+          <div class="CVPR 2025" style="margin-top: 10px; margin-bottom: 20px;">
+            <h2 class="title is-4">CVPRW 2025, Workshop on Urban Scene Modeling</h2>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wenzhao.de/">Wenzhao Tang*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://colin-de.github.io/">Weihang Li*</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              Xiucheng Liang</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://olafwysocki.github.io/">Olaf Wysocki</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Filip Biljecki</a><sup>3</sup>,</span>
+            <span class="author-block">
+              Christoph Holst</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Boris Jutzi</a><sup>1</sup>
+            </span> 
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Munich</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Munich Center for Machine Learning</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>National University of Singapore</span>&nbsp;&nbsp;&nbsp;
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Wenzhao Tang and Weihang Li contributed equally to this work.</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-family: monospace;">{wenzhao.tang, weihang.li, olaf.wysocki}@tum.de</span>
+          </div>
+
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="static/pdf/GCE-Pose.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="static/pdf/GCE-Pose_supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded" 
+                   style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark"
+                   style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/WenzhaoTang/Texture2LoD3"
+                class="external-link button is-normal is-rounded is-dark"
+                style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+               <span class="icon">
+                   <i class="fab fa-github"></i>
+               </span>
+               <span>Code</span>
+               </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark"
+                    style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark"
+                   style="background-color: #f0f0f0; color: #aaa; pointer-events: none; cursor: not-allowed;">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Datasets</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Input Image Pair Section -->
+      <div class="input-image-pair has-text-centered" style="margin-bottom: 20px;">
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <img src="static/images/teaser_v8.png" alt="Input Image 1" style="max-width: 80%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <!-- <h3 class="subtitle" style="margin-top: 10px;">Input Image Pair</h3> -->
+         <!-- Video Section -->
+        <br>
+        <!-- <video id="teaser" autoplay muted loop playsinline controls width="110%">
+          <source src="static/videos/teaser.mp4" type="video/mp4">
+        </video> -->
+      </div>
+
+     
+      <h2 class="subtitle has-text-centered">
+        Texture2LoD3 proposes leveraging ubiquitous street-level images and low-level building models for accurate ortho-texturing (left): 
+        Enabling accurate semantic segmentation (center) and facade-rich LoD3 reconstruction (right).
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite recent advancements in surface reconstruction, Level of Detail (LoD) 3 building reconstruction remains an unresolved challenge.
+            The main issue pertains to the object-oriented modelling paradigm, which requires georeferencing, watertight geometry, 
+            facade semantics, low-poly representation, and starkly contrasting unstructured mesh-oriented models. 
+            In Texture2LoD3, we introduce a novel method leveraging the ubiquity of 3D building model priors and panoramic street-level images, 
+            enabling the reconstruction of LoD3 building models.
+            We observe that prior low-detail building models can serve as valid planar targets for ortho-rectifying street-level panoramic images. 
+            Moreover, deploying segmentation on rectified images on low-level building surfaces supports maintaining essential georeferencing, 
+            watertight geometry, and low-poly representation for LoD3 reconstruction.
+            In the absence of LoD3 validation data, we additionally introduce the ReLoD3 dataset, 
+            on which we experimentally demonstrate that our method leads to improved facade segmentation accuracy by 11% and can replace costly manual projections.
+            We believe that Texture2LoD3 can scale the adoption of LoD3 models, opening applications in estimating building solar potential or enhancing autonomous driving simulations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+
+        <img src="./static/images/overview_figure.png"
+                  class="teaser-fig"
+                  width="100%"
+                  alt="teaser-fig."/>
+
+        <div class="content has-text-justified">
+          <p>
+            <strong>Overview of the proposed Texture2LoD3 method:</strong> The method commences with global matching of georeferenced panorama images and 
+            low-level 3D models. In the top branch, 3D target facade surfaces are simplified, while in the bottom branch panoramic images are rectified and 
+            building facade instances are extracted. Subsequently, fine object-to-object matching and projection is performed to the simplified 3D model surface. 
+            Quadrilateral fitting and image-to-plane ray casting ensure accurate ortho-rectified 3D texture, enabling accurate facade elements segmentation 
+            and LoD3 reconstruction.  
+          </p>
+          </div>
+
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">ReLoD3 Texture Dataset Benchmark on Facade Segmentation</h2>
+  
+          <img src="./static/images/qualitative_2_ver2.png"
+                    class="teaser-fig"
+                    width="100%"
+                    alt="teaser-fig."/>
+  
+          <div class="content has-text-justified">
+            <p>
+              Tested facade segmentation baselines on a selected building from the introduced ReLoD3 benchmark dataset across various texture projection methods. 
+              Our Texture2LoD3 is less prone to distortions, hence yielding more accurate segmentation across the baselines.
+            </p>
+            </div>
+
+          <img src="./static/images/qualitative_1_ver2.png"
+                    class="teaser-fig"
+                    width="100%"
+                    alt="teaser-fig."/>
+
+          <div class="content has-text-justified">
+            <p>
+              Texture2LoD3 maintains on-par accuracy with manual texturing even in the presence of increasing facade width, unlike the method without rectification. 
+              Shown on MaskFormer on four width-different facades of the introduced ReLoD3 benchmark dataset. 
+            </p>
+            </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      Coming soon.
+    </code></pre>
+  </div>
+</section>
+
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']]
+        }
+    };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is borrowed from <a href="https://github.com/3d-moments/3d-moments.github.io">3D Moments website</a>.
+          </p>
+          </div>
+      </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="static/css/bootstrap.min.js"></script>
+  <!-- <script src="/js/offcanvas.js"></script> -->
+  <script src="static/css/jquery.event.move.js"></script>
+  <script src="static/css/jquery.twentytwenty.js"></script>
+
+  <script>
+    $(window).load(function () { $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 }); });
+  </script>
+
+</body>
+</html>

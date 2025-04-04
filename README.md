@@ -1,31 +1,9 @@
-# ReLoD3 Texturing
+# Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images
 
-Welcome to the draft version of our code for experiments in the ReLoD3 Texturing project! This project focuses on various techniques for enhancing 3D building models. Below are the key components of the project:
+This repository contains source code for the [Texture2LoD3 website]().
 
-## Step 0: LoD3 Building Extraction
-Extract detailed Level of Detail 3 (LoD3) building models from various data sources.
+If you find our work useful please cite:
 
-## Step 1: Cluster Small Triangular Faces
-Group small triangular faces to simplify the 3D model and improve performance.
 
-## Step 2: Rectification and Stitching
-Rectify and stitch the image tiles of WallSurface to create a seamless texture.
-
-## Step 3: Instance Segmentation
-Segment the the Steiched and Rectified images of WallSurface
-
-## Step 4: Morphological Adaptation
-Apply morphological operations to adapt and refine the rectified images of WallSurface.
-
-## Step 5: Texturing
-Utilize ray tracing and texture mapping techniques to apply WallSurface textures onto the LoD3 models.
-
-## Step 6: Evaluation
-SSIM and PSNR evaluation of the generated textures.
-
-## Misc. Revised Code from NUS TEAM
-The revised code from NUS team is available in the `footprints` folder, with missing geo-data calculation and Panaroma images extraction script integrated.
-
----
-
-Feel free to explore each section to learn more about the techniques and methodologies used in this project. Happy modeling O(laf)W(eihang)W(enzhao):D
+# Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
