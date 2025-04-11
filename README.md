@@ -1,31 +1,14 @@
-# ReLoD3 Texturing
+# Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images<br><sub>Official implementation of the paper</sub>
+![Teaser](./assets/teaser.png)
 
-Welcome to the draft version of our code for experiments in the ReLoD3 Texturing project! This project focuses on various techniques for enhancing 3D building models. Below are the key components of the project:
+Texture2LoD3 proposes leveraging ubiquitous street-level images and low-level building models for accurate ortho-texturing (left): Enabling accurate semantic segmentation (center) and facade-rich LoD3 reconstruction (right).
 
-## Step 0: LoD3 Building Extraction
-Extract detailed Level of Detail 3 (LoD3) building models from various data sources.
+**Texture2LoD3: Enabling LoD3 Building Reconstruction With Panoramic Images**<br>
+Wenzhao Tang, Weihang Li, Xiucheng Liang, Olaf Wysocki, Filip Biljecki, Christoph Holst, Boris Jutzi<br>
+https://wenzhaotang.github.io/Texture2LoD3/ <br>
 
-## Step 1: Cluster Small Triangular Faces
-Group small triangular faces to simplify the 3D model and improve performance.
+Abstract: *Despite recent advancements in surface reconstruction, Level of Detail (LoD) 3 building reconstruction remains an unresolved challenge. The main issue pertains to the object-oriented modelling paradigm, which requires georeferencing, watertight geometry, facade semantics, low-poly representation, and starkly contrasting unstructured mesh-oriented models. In Texture2LoD3, we introduce a novel method leveraging the ubiquity of 3D building model priors and panoramic street-level images, enabling the reconstruction of LoD3 building models. We observe that prior low-detail building models can serve as valid planar targets for ortho-rectifying street-level panoramic images. Moreover, deploying segmentation on rectified images on low-level building surfaces supports maintaining essential georeferencing, watertight geometry, and low-poly representation for LoD3 reconstruction. In the absence of LoD3 validation data, we additionally introduce the ReLoD3 dataset, on which we experimentally demonstrate that our method leads to improved facade segmentation accuracy by 11% and can replace costly manual projections. We believe that Texture2LoD3 can scale the adoption of LoD3 models, opening applications in estimating building solar potential or enhancing autonomous driving simulations.*
 
-## Step 2: Rectification and Stitching
-Rectify and stitch the image tiles of WallSurface to create a seamless texture.
+<br>
 
-## Step 3: Instance Segmentation
-Segment the the Steiched and Rectified images of WallSurface
-
-## Step 4: Morphological Adaptation
-Apply morphological operations to adapt and refine the rectified images of WallSurface.
-
-## Step 5: Texturing
-Utilize ray tracing and texture mapping techniques to apply WallSurface textures onto the LoD3 models.
-
-## Step 6: Evaluation
-SSIM and PSNR evaluation of the generated textures.
-
-## Misc. Revised Code from NUS TEAM
-The revised code from NUS team is available in the `footprints` folder, with missing geo-data calculation and Panaroma images extraction script integrated.
-
----
-
-Feel free to explore each section to learn more about the techniques and methodologies used in this project. Happy modeling O(laf)W(eihang)W(enzhao):D
+### Source Code & Dataset Coming Soon!
